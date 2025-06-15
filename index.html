@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kyara Beverages</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo"> Kyara <span>Beverages</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#welcome">Welcome</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-icons">
+      <span class="icon">🔍</span>
+      <span class="icon">🛒</span>
+      <span class="hamburger" id="hamburger">☰</span>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <video class="background-video" autoplay muted loop playsinline>
+      <source src="Videos/Beverages.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Sip the <span>Goodness</span></h1>
+        <p>Explore our range of healthy beverages</p>
+        <button class="shop-btn" onclick="scrollToSection('products')">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+    <section class="our" id="welcome">
+        <h2>Welcome to <span>Kyara</span></h2>
+        <p>We believe in blending taste with health. Our beverages are crafted with natural ingredients to keep you refreshed and energized.</p>
+      
+        <div class="welcome-grid">
+          <div class="welcome-card" style="background-image: url('Images/Natural.png');">
+            <div class="card-overlay">
+              <h3>Natural Ingredients</h3>
+              <p>We use only handpicked fruits and organic extracts to deliver pure, wholesome refreshment.</p>
+            </div>
+          </div>
+          <div class="welcome-card" style="background-image: url('Images/Sustanibilty.png');">
+            <div class="card-overlay">
+              <h3>Sustainability</h3>
+              <p>Kyara is committed to eco-friendly packaging and sustainable sourcing practices.</p>
+            </div>
+          </div>
+            <div class="welcome-card" style="background-image: url('Images/Flavors.png');">
+            <div class="card-overlay">
+              <h3>Flavors with Innovation</h3>
+              <p>From traditional to exotic blends, we constantly innovate to excite your taste buds.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-text">
+        <h2>Our Story</h2>
+        <h3>Crafted with Care</h3>
+        <p>
+          At Kyara Beverages, we are passionate about crafting nutritious drinks
+          that cater to health-conscious consumers and millennials. Our millet-based
+          fruit drinks are carefully formulated to provide a refreshing and wholesome
+          experience for our valued customers.
+        </p>
+
+        <div id="moreText" class="hidden">
+          <p>
+            We work closely with local farmers to source sustainable, organic ingredients. <br>
+            Each bottle is a result of rigorous research and testing. <br>
+            Our team is committed to eco-friendly practices from production to packaging. <br>
+            Customer feedback drives our innovation and continuous improvement. <br>
+            We believe in beverages that not only taste good but do good too.
+          </p>
+        </div>
+        
+        <button id="learnMoreBtn">Learn More</button>
+      </div>
+      <div class="about-images">
+        <img src="Images/Customers.png" alt="Customer holding drink" />
+        <img src="Images/Lab.png" alt="Worker checking bottle in lab" />
+      </div>
+    </section>
+      
+      
+    <section class="section" id="products">
+      <h2>Our Products</h2>
+    
+      <div class="product-grid">
+        <div class="product-card bg" style="background-image: url('Images/Berry.png');">
+          <div class="overlay-content">
+            <h3>Berry Blast</h3>
+            <p onclick="togglePrice(this)">Rich in antioxidants and delicious flavor.</p>
+            <span class="price hidden">₹120</span>
+          </div>
+        </div>
+    
+        <div class="product-card bg" style="background-image: url('Images/Citrus.png');">
+          <div class="overlay-content">
+            <h3>Citrus Zing</h3>
+            <p onclick="togglePrice(this)">A tangy punch of natural citrus fruits.</p>
+            <span class="price hidden">₹110</span>
+          </div>
+        </div>
+    
+        <div class="product-card bg" style="background-image: url('Images/Mint.png');">
+          <div class="overlay-content">
+            <h3>Mint Cooler</h3>
+            <p onclick="togglePrice(this)">Refreshing mint-infused beverage perfect for hot days.</p>
+            <span class="price hidden">₹115</span>
+          </div>
+        </div>
+    
+        <div class="product-card bg" style="background-image: url('Images/Ginger.png');">
+          <div class="overlay-content">
+            <h3>Ginger Spark</h3>
+            <p onclick="togglePrice(this)">A bold blend of ginger and citrus to invigorate your senses.</p>
+            <span class="price hidden">₹130</span> 
+          </div>
+        </div>
+
+        <div class="product-card bg" style="background-image: url('Images/Green.png');">
+          <div class="overlay-content">
+            <h3>Green Fusion</h3>
+            <p onclick="togglePrice(this)">A healthy mix of green vegetables and fruits.</p>
+            <span class="price hidden">₹125</span>
+          </div>
+        </div>
+        <div class="product-card bg" style="background-image: url('Images/Exotic.png');">
+          <div class="overlay-content">
+            <h3>Exotic Blend</h3>
+            <p onclick="togglePrice(this)">A unique mix of tropical fruits for a taste adventure.</p>
+            <span class="price hidden">₹140</span>
+          </div>
+        </div>
+
+        <div class="product-card bg" style="background-image: url('Images/Herbal.png');">
+          <div class="overlay-content">
+            <h3>Herbal Infusion</h3>
+            <p onclick="togglePrice(this)">A soothing blend of herbs and spices.</p>
+            <span class="price hidden">₹135</span>
+          </div>
+        </div>
+
+        <div class="product-card bg" style="background-image: url('Images/Choco.png');">
+          <div class="overlay-content">
+            <h3>Choco Delight</h3>
+            <p onclick="togglePrice(this)">A rich chocolatey drink for the sweet tooth.</p>
+            <span class="price hidden">₹150</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-column">
+          <h3 class="logo-foot">Kyara <span>Beverages</span></h3>
+          <p>7307597720</p>
+          <p>yash.raghubanshi@2024nst.rishihood.edu.in</p>
+      </div>
+        
+        <div class="contact-column">
+          <p>500 Terry Francine Street,<br>
+             6th Floor, San Francisco, CA<br>
+             94158</p>
+             <div class="social-icons">
+              <a href="https://github.com/Yash990-bit" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/whyash7/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://leetcode.com/u/yash_ragh_08" target="_blank" aria-label="LeetCode">
+                <i class="fas fa-code"></i>
+              </a>
+              <a href="www.linkedin.com/in/yash-raghubanshi-ba9ba630b" target="_blank" aria-label="Linkdein">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            
+        </div>
+    
+        <div class="contact-column">
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Accessibility Statement</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+          <p class="footer-copy">© 2025 by Kyara Beverages</p>
+        </div>
+    </div>
+  </section>
+    
+    
+<script src="script.js"></script>
+</body>
+</html>
